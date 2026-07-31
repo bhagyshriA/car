@@ -1,0 +1,38 @@
+<div class = "container">
+    <h1 class="text-center mb-4">Cars</h1>
+    <h4 class="text-center mb-4">Explore Our Range of Premium Vehicles</h4>
+    <div class="row">
+
+        
+        <div class="col-md-4 mb-4" *ngFor="let product of productArray">
+        <mat-card class ="example-card h-100">
+        <mat-card-header>
+
+            <div mat-card-title>{{product.pname}}</div>
+            </mat-card-header>
+            <img mat - card-image [src]="product.img" alt="Photo of a car">
+            <mat-card-content>
+                <p>{{product.description}}</p>
+                
+          <div class="text-center mb-4">
+    <span class="badge bg-primary fs-6 p-2">
+      Status: {{ productMsg }}
+    </span>
+  </div>
+          <p class="mt-2 text-muted" *ngIf="inputValue">
+        Searching for: <strong>{{ inputValue }}</strong>
+      </p>
+        
+            </mat-card-content>
+            <mat-card-actions class="d-flex justify-content-between">
+                <button mat-flat-button color="primary"(click)="productAdd(product.pname)"[disabled]="selectedCarName !== null"> Add </button>
+                <button mat-flat-button color="warn" (click)="productRemove(product.pname)"[disabled]="selectedCarName != product.pname">Remove</button>
+
+                </mat-card-actions>
+                </mat-card>
+
+                </div>
+                </div>
+                </div>
+                  
+            
