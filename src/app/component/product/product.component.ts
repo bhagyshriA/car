@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Iproduct } from "../../model/product.component";
-import { products } from '../../const/product.component';
+import { product } from '../../const/product.component';
 
 @Component({
   selector: 'app-product', 
